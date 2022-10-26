@@ -1,8 +1,9 @@
-export default function Hero() {
+export default function Hero({ title, subtitle, imageOn }) {
   return (
     <div>
-      <h1>CUBE</h1>
-      <p>アウトプット用サイト</p>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
+      {imageOn && <figure>[画像]</figure>}
     </div>
   )
 }
