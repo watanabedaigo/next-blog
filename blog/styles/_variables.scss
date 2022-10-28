@@ -18,8 +18,28 @@ $small-heading3: calc(#{$small-heading2} * 0.86);
 
 // space
 $space-xs: clamp(1.25rem, 1rem + 0.98vw, 1.875rem);
-$space-sm: calc(#{space-xs} * 1.5);
-$space-md: calc(#{space-xs} * 2);
-$space-lg: calc(#{space-xs} * 3);
-$space-xl: calc(#{space-xs} * 4);
+$space-sm: calc(#{$space-xs} * 1.5);
+$space-md: calc(#{$space-xs} * 2);
+$space-lg: calc(#{$space-xs} * 3);
+$space-xl: calc(#{$space-xs} * 4);
 $space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem);
+
+// breakpoint
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "pc": "screen and (min-width: 768px)",
+) !default;
+
+// mixin
+@mixin mediaQuery($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// function
+@function vw($px, $base: 750px) {
+  $value: (strip-unit($px) / strip-unit($base)) * 100vw;
+
+  @return $value;
+}

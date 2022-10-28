@@ -1,0 +1,13 @@
+@import "variables";
+
+.contact {
+  margin-top: 1em;
+
+  @include mediaQuery(pc) {
+    margin-top: 0;
+  }
+}
+
+.contact__heading {
+  font-size: $body;
+}

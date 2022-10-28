@@ -1,0 +1,25 @@
+@import "variables";
+
+.flexBox {
+  composes: flex_sideBySide from "./utils.module.scss";
+  margin: $space-md 0 $space-lg;
+
+  @include mediaQuery(pc) {
+    .flexBox__main {
+      width: 70%;
+      max-width: 768px;
+    }
+    
+    .flexBox__sidebar {
+      position: sticky;
+      top: 40px;
+      width: 20%;
+      max-width: 240px;
+
+      * {
+        text-align: right;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,28 @@
+@import "variables";
+
+.nav__list {
+  display: flex;
+  gap: 2em;
+}
+
+@media (hover: hover) {
+  .nav__list {
+    a {
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  .nav__list {
+    a {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        color: $accent;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "variables";
+
+.post_body {
+  word-wrap: break-word;
+
+  h2, h3 {
+    margin-top: 2em;
+
+    & + * {
+      margin-top: 0.8em;
+    }
+  }
+}

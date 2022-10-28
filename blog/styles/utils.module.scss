@@ -1,0 +1,32 @@
+@import "variables";
+
+.flex_bothEnds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_sideBySide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mediaQuery(pc) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.flex_sideBySideCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include mediaQuery(pc) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

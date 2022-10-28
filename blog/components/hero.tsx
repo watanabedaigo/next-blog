@@ -7,12 +7,14 @@ type HeroProps = {
 };
 
 export default function Hero(props: HeroProps) {
-  const {title, subtitle, imageOn} = props;
+  const { title, subtitle, imageOn } = props;
 
   return (
-    <div className={styles.hero__txt}>
-      <h1 className={styles.hero__ttl}>{title}</h1>
-      <p className={styles.hero__subtxt}>{subtitle}</p>
+    <div className={styles.flexBox}>
+      <div className={styles.hero__txt}>
+        <h1 className={styles.hero__ttl}>{title}</h1>
+        <p className={styles.hero__subtxt}>{subtitle}</p>
+      </div>
       {imageOn && <figure>[画像]</figure>}
     </div>
   )

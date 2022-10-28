@@ -1,5 +1,9 @@
 @import "variables";
 
+.flexBox {
+  composes: flex_sideBySideCenter from 'styles/utils.module.scss';
+}
+
 .hero__txt {
   padding: calc(#{$display} * 0.5) 0 calc(#{$display} * 0.7);
 }

@@ -1,0 +1,11 @@
+@import "variables";
+
+.footer {
+  background-color: $gray-10;
+  padding: 70px 0;
+}
+
+.flexBox {
+  composes: flex_sideBySide from 'styles/utils.module.scss';
+}
+
