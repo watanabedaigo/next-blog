@@ -4,7 +4,9 @@ import Nav from './nav'
 export default function Header() {
   return (
     <header>
-      <Logo />
+      <Logo
+        boxOn={true}
+      />
       <Nav />
     </header>
   )

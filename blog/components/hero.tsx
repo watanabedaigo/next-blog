@@ -1,6 +1,14 @@
 import styles from 'styles/hero.module.scss'
 
-export default function Hero({ title, subtitle, imageOn }) {
+type HeroProps = {
+  title: string;
+  subtitle: string;
+  imageOn: boolean;
+};
+
+export default function Hero(props: HeroProps) {
+  const {title, subtitle, imageOn} = props;
+
   return (
     <div className={styles.hero__txt}>
       <h1 className={styles.hero__ttl}>{title}</h1>

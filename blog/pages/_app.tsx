@@ -1,7 +1,8 @@
-import Layout from 'components/layout.jsx'
+import { AppProps } from 'next/app';
+import Layout from 'components/layout'
 import 'styles/globals.scss'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }:AppProps) {
   // 共通部分を全ページコンポーネントに当てるために、共通部分のLayoutコンポーネントで囲う
   return (
     <Layout>

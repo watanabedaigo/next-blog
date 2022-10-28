@@ -1,11 +1,15 @@
+@import "variables";
+
 .hero__txt {
-  
+  padding: calc(#{$display} * 0.5) 0 calc(#{$display} * 0.7);
 }
 
 .hero__ttl {
-
+  font-size: $display;
+  font-weight: 900;
+  letter-spacing: 0.15em;
 }
 
 .hero__subttl {
-  
+  font-size: $small-heading2;
 }

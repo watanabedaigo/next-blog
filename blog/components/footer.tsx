@@ -3,7 +3,9 @@ import Logo from './logo'
 export default function Footer() {
   return (
     <footer>
-      <Logo />
+      <Logo
+        boxOn={false}
+      />
     </footer>
   )
 }
