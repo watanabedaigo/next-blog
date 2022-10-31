@@ -1,4 +1,6 @@
 import styles from 'styles/hero.module.scss'
+import Image from 'next/legacy/image'
+import cube from 'images/cube.jpeg'
 
 type HeroProps = {
   title: string;
@@ -15,7 +17,18 @@ export default function Hero(props: HeroProps) {
         <h1 className={styles.hero__ttl}>{title}</h1>
         <p className={styles.hero__subtxt}>{subtitle}</p>
       </div>
-      {imageOn && <figure>[画像]</figure>}
+      {imageOn && (
+        <figure className={styles.hero__img}>
+          <Image
+            src={cube}
+            alt=''
+            layout='responsive'
+            sizes='100vw'
+            priority
+            placeholder='blur'
+          />
+        </figure>
+      )}
     </div>
   )
 }

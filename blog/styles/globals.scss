@@ -19,6 +19,12 @@ h3 {
   font-size: $heading3;
 }
 
+span {
+  img {
+    transition: .2s;
+  }
+}
+
 // reset
 body, h1, h2, h3, h4, p, figure, ul {
   margin: 0;

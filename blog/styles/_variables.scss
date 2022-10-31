@@ -40,6 +40,5 @@ $breakpoints: (
 // function
 @function vw($px, $base: 750px) {
   $value: (strip-unit($px) / strip-unit($base)) * 100vw;
-
   @return $value;
 }

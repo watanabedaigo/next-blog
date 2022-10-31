@@ -17,3 +17,11 @@
 .hero__subttl {
   font-size: $small-heading2;
 }
+
+.hero__img {
+  width: 100%;
+
+  @include mediaQuery(pc) {
+    width: 50%;
+  }
+}
