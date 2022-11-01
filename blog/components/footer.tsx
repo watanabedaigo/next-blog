@@ -1,6 +1,6 @@
 import Logo from './logo'
 import Container from './container'
-
+import Social from './social'
 import styles from 'styles/footer.module.scss'
 
 export default function Footer() {
@@ -13,7 +13,7 @@ export default function Footer() {
           <Logo
             boxOn={false}
           />
-        [ソーシャル]
+          <Social />
         </div>
       </Container>
     </footer>
