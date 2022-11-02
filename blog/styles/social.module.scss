@@ -1,5 +1,11 @@
 .spcial__list {
-  display: flex;
+  display: inline-flex;
   gap: 1.5em;
   font-size: 24px;
+}
+
+.spcial__list_large {
+  display: inline-flex;
+  gap: 1.5em;
+  font-size: 30px;
 }

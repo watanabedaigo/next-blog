@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className={styles.contact}>
       <h3 className={styles.contact__heading}>Contact</h3>
-      <Social />
+      <Social iconLarge={true} />
       <address>@mailaddress</address>
     </div>
   )

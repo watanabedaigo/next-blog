@@ -6,10 +6,15 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import styles from 'styles/social.module.scss'
 
+type SocialProps = {
+  iconLarge: boolean,
+}
 
-export default function Social (){
-  return(
-    <ul className={styles.spcial__list}>
+export default function Social(props: SocialProps) {
+  const { iconLarge } = props;
+
+  return (
+    <ul className={iconLarge ? styles.spcial__list_large : styles.spcial__list}>
       <li>
         <a href="">
           <FontAwesomeIcon icon={faTwitter} />

@@ -13,7 +13,7 @@ export default function Footer() {
           <Logo
             boxOn={false}
           />
-          <Social />
+          <Social iconLarge={false} />
         </div>
       </Container>
     </footer>
