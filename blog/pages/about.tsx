@@ -2,31 +2,41 @@ import Hero from 'components/hero'
 import Container from 'components/container'
 import PostBody from 'components/post-body'
 import Contact from 'components/contact'
+import Meta from 'components/meta'
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from 'components/two-column'
 import Image from 'next/legacy/image'
 import about from 'images/about.jpeg'
 
 export default function About() {
   return (
-    <Container
-      large={false}
-    >
-      <Hero
-        title="About"
-        subtitle="About development activities"
-        imageOn={false}
+    <>
+      <Meta
+        pageTitle='About'
+        pageDesc='About Page'
+        pageImg={about.src}
+        pageImgW={about.width}
+        pageImgH={about.height}
       />
 
-      <figure>
-        <Image
-          src={about}
-          alt=''
-          layout='responsive'
-          sizes='(min-width: 1152px) 1152px, 100vw'
-          priority
-          placeholder='blur'
+      <Container
+        large={false}
+      >
+        <Hero
+          title="About"
+          subtitle="About development activities"
+          imageOn={false}
         />
-      </figure>
+
+        <figure>
+          <Image
+            src={about}
+            alt=''
+            layout='responsive'
+            sizes='(min-width: 1152px) 1152px, 100vw'
+            priority
+            placeholder='blur'
+          />
+        </figure>
 
         <TwoColumn>
           <TwoColumnMain>
@@ -50,6 +60,8 @@ export default function About() {
             <Contact />
           </TwoColumnSidebar>
         </TwoColumn>
-    </Container>
+      </Container>
+    </>
+
   )
 }
