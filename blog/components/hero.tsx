@@ -1,6 +1,6 @@
-import styles from 'styles/hero.module.scss'
-import Image from 'next/legacy/image'
-import cube from 'images/cube.jpeg'
+import styles from "styles/hero.module.scss";
+import Image from "next/legacy/image";
+import cube from "images/cube.jpg";
 
 type HeroProps = {
   title: string;
@@ -21,14 +21,14 @@ export default function Hero(props: HeroProps) {
         <figure className={styles.hero__img}>
           <Image
             src={cube}
-            alt=''
-            layout='responsive'
-            sizes='100vw'
+            alt=""
+            layout="responsive"
+            sizes="100vw"
             priority
-            placeholder='blur'
+            placeholder="blur"
           />
         </figure>
       )}
     </div>
-  )
+  );
 }

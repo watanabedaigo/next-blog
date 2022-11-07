@@ -1,0 +1,22 @@
+@import "variables";
+
+.post_header__wrapper {
+  padding: $space-sm 0;
+}
+
+.post_header__sttl {
+  font-size: $small-heading2;
+  font-weight: 700;
+}
+
+.post_header__ttl {
+  margin-top: 0.2em;
+}
+
+.post_header__time {
+  display: flex;
+  gap: 0.5em;
+  color: $gray-50;
+  font-size: $small-heading3;
+  margin-top: 1em;
+}
