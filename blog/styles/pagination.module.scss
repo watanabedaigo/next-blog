@@ -1,0 +1,18 @@
+@import "variables";
+
+.pagination__list {
+  composes: flex_bothEnds from "styles/utils.module.scss";
+  margin: $space-lg 0;
+}
+
+.pagination__item {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+}
+
+.pagination__item_next {
+  margin-left: 0;
+}

@@ -1,6 +1,7 @@
 import { getPostBySlug, getAllSlugs } from "lib/api";
 import { extractText } from "lib/extract-text";
 import { eyecatchLocal } from "lib/constants";
+import { prevNextPost } from "lib/prev-next-post";
 import Container from "components/container";
 import PostHeader from "components/post-header";
 import PostBody from "components/post-body";
@@ -12,6 +13,7 @@ import {
 import ConvertBody from "components/convert-body";
 import PostCategories from "components/post-categories";
 import Meta from "components/meta";
+import Pagination from "components/pagination";
 import Image from "next/legacy/image";
 
 type ScheduleProps = {
@@ -21,10 +23,27 @@ type ScheduleProps = {
   eyecatch: any;
   categories: [];
   description: string;
+  prevPost: {
+    title: string;
+    slug: string;
+  };
+  nextPost: {
+    title: string;
+    slug: string;
+  };
 };
 
 export default function Post(props: ScheduleProps) {
-  const { title, publish, content, eyecatch, categories, description } = props;
+  const {
+    title,
+    publish,
+    content,
+    eyecatch,
+    categories,
+    description,
+    prevPost,
+    nextPost,
+  } = props;
 
   return (
     <>
@@ -64,6 +83,12 @@ export default function Post(props: ScheduleProps) {
               <PostCategories categories={categories} />
             </TwoColumnSidebar>
           </TwoColumn>
+          <Pagination
+            prevText={prevPost.title}
+            prevUrl={`/blog/${prevPost.slug}`}
+            nextText={nextPost.title}
+            nextUrl={`/blog/${nextPost.slug}`}
+          />
         </article>
       </Container>
     </>
@@ -71,19 +96,24 @@ export default function Post(props: ScheduleProps) {
 }
 
 export async function getStaticPaths() {
-  const allSlugs = await getAllSlugs();
+  const allSlugs = await getAllSlugs(5);
 
   return {
     paths: allSlugs.map((slug: { slug: string }) => `/blog/${slug.slug}`),
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
 export async function getStaticProps(context: { params: { slug: string } }) {
   const slug = context.params.slug;
   const post = await getPostBySlug(slug);
+  if (!post) {
+    return { notFound: true };
+  }
   const description = extractText(post.content);
   const eyecatch = post.eyecatch ?? eyecatchLocal;
+  const allSlugs = await getAllSlugs();
+  const [prevPost, nextPost] = prevNextPost(allSlugs, slug);
 
   return {
     props: {
@@ -93,6 +123,8 @@ export async function getStaticProps(context: { params: { slug: string } }) {
       eyecatch: eyecatch,
       categories: post.categories,
       description: description,
+      prevPost: prevPost,
+      nextPost: nextPost,
     },
   };
 }
