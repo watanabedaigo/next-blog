@@ -1,21 +1,50 @@
+import { useState } from "react";
 import Link from "next/link";
 import styles from "styles/nav.module.scss";
 
 export default function Nav() {
+  const [navIsActive, setNavIsActive] = useState(false);
+
+  const handleSetNavIsActive = () => {
+    setNavIsActive(!navIsActive);
+  };
+
   return (
     <nav>
-      <ul className={styles.nav__list}>
+      <button
+        onClick={handleSetNavIsActive}
+        className={navIsActive ? `${styles.btn} ${styles.active}` : styles.btn}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul
+        className={
+          navIsActive
+            ? `${styles.nav__list} ${styles.active}`
+            : styles.nav__list
+        }
+      >
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/" onClick={handleSetNavIsActive}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link href="/about" onClick={handleSetNavIsActive}>
+            About
+          </Link>
         </li>
         <li>
-          <Link href="/blog">Blog</Link>
+          <Link href="/blog" onClick={handleSetNavIsActive}>
+            Blog
+          </Link>
         </li>
         <li>
-          <Link href="/blog/categories/fun">Categories</Link>
+          <Link href="/blog/categories/fun" onClick={handleSetNavIsActive}>
+            Categories
+          </Link>
         </li>
       </ul>
     </nav>
