@@ -1,3 +1,14 @@
+@import "variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  background-color: $white;
+}
+
 .flexBox {
-  composes: flex_bothEnds from 'styles/utils.module.scss';
+  composes: flex_bothEnds from "styles/utils.module.scss";
 }
