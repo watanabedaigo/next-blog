@@ -8,6 +8,7 @@ import {
   TwoColumnMain,
   TwoColumnSidebar,
 } from "components/two-column";
+import Accordion from "components/accordion";
 import Image from "next/legacy/image";
 import about from "images/about.jpg";
 
@@ -70,6 +71,18 @@ export default function About() {
               <p>
                 testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
               </p>
+              <div>
+                <h2>FAQ</h2>
+                <Accordion heading="HTML">
+                  <p>マークアップ言語。骨組みを作る。</p>
+                </Accordion>
+                <Accordion heading="CSS">
+                  <p>スタイルシート言語。見た目を整える。</p>
+                </Accordion>
+                <Accordion heading="JavaScript">
+                  <p>プログラミング言語。演出面の実装、要素の生成が可能。</p>
+                </Accordion>
+              </div>
             </PostBody>
           </TwoColumnMain>
           <TwoColumnSidebar>

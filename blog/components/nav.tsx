@@ -3,18 +3,18 @@ import Link from "next/link";
 import styles from "styles/nav.module.scss";
 
 export default function Nav() {
-  const [navIsActive, setNavIsActive] = useState(false);
+  const [navIsOpen, setnavIsOpen] = useState(false);
 
   const handleNavToggle = () => {
-    setNavIsActive(!navIsActive);
+    setnavIsOpen(!navIsOpen);
   };
 
   const handleNavClose = () => {
-    setNavIsActive(false);
+    setnavIsOpen(false);
   };
 
   return (
-    <nav className={navIsActive ? styles.open : undefined}>
+    <nav className={navIsOpen ? styles.open : undefined}>
       <button onClick={handleNavToggle} className={styles.btn}>
         <span></span>
         <span></span>
