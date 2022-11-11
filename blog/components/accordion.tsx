@@ -20,8 +20,7 @@ export default function Accordion(props: AccordionProps) {
 
   const setTxtWrapperHeight = () => {
     const txtWrapper = txtWrapperObj.current;
-    const txt = txtWrapper.querySelector("div");
-    const txtHeght = txt.clientHeight;
+    const txtHeght = txtWrapper.querySelector("div").clientHeight;
     txtWrapper.style.setProperty("--txtHeight", `${txtHeght}px`);
   };
 
