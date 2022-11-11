@@ -10,20 +10,13 @@ export default function Nav() {
   };
 
   return (
-    <nav>
-      <button
-        onClick={handleSetNavIsActive}
-        className={navIsActive ? `${styles.btn} ${styles.active}` : styles.btn}
-      >
+    <nav className={navIsActive ? styles.open : undefined}>
+      <button onClick={handleSetNavIsActive} className={styles.btn}>
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <ul
-        className={
-          navIsActive ? `${styles.list} ${styles.active}` : styles.list
-        }
-      >
+      <ul className={styles.list}>
         <li>
           <Link href="/" onClick={handleSetNavIsActive}>
             Home
