@@ -30,12 +30,12 @@ export default function Posts(props: PostsProps) {
   const { allPosts } = props;
 
   return (
-    <ul className={styles.posts__list}>
+    <ul className={styles.list}>
       {allPosts.map((post: postProps) => {
         return (
-          <li key={post.slug} className={styles.posts__item}>
+          <li key={post.slug} className={styles.item}>
             <Link href={`/blog/${post.slug}`}>
-              <div className={styles.posts__item__img}>
+              <div className={styles.img}>
                 <Image
                   src={post.eyecatch.url}
                   layout="fill"

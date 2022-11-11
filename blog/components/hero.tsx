@@ -13,12 +13,12 @@ export default function Hero(props: HeroProps) {
 
   return (
     <div className={styles.flexBox}>
-      <div className={styles.hero__txt}>
-        <h1 className={styles.hero__ttl}>{title}</h1>
-        <p className={styles.hero__subtxt}>{subtitle}</p>
+      <div className={styles.wrapper}>
+        <h1 className={styles.ttl}>{title}</h1>
+        <p className={styles.subttl}>{subtitle}</p>
       </div>
       {imageOn && (
-        <figure className={styles.hero__img}>
+        <figure className={styles.img}>
           <Image
             src={cube}
             alt=""

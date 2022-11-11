@@ -21,9 +21,7 @@ export default function Nav() {
       </button>
       <ul
         className={
-          navIsActive
-            ? `${styles.nav__list} ${styles.active}`
-            : styles.nav__list
+          navIsActive ? `${styles.list} ${styles.active}` : styles.list
         }
       >
         <li>

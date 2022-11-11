@@ -13,11 +13,11 @@ export default function PostHeader(props: PostHeaderProps) {
   const { title, subtitle, publish } = props;
 
   return (
-    <div className={styles.post_header__wrapper}>
-      <p className={styles.post_header__sttl}>{subtitle}</p>
-      <h1 className={styles.post_header__ttl}>{title}</h1>
+    <div className={styles.wrapper}>
+      <p className={styles.ttl}>{subtitle}</p>
+      <h1 className={styles.subttl}>{title}</h1>
       {publish && (
-        <div className={styles.post_header__time}>
+        <div className={styles.time}>
           <FontAwesomeIcon icon={faClock} size="lg" color="#aaaaaa" />
           <ConvertDate dateISO={publish} />
         </div>

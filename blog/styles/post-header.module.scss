@@ -1,19 +1,19 @@
 @import "variables";
 
-.post_header__wrapper {
+.wrapper {
   padding: $space-sm 0;
 }
 
-.post_header__sttl {
+.ttl {
   font-size: $small-heading2;
   font-weight: 700;
 }
 
-.post_header__ttl {
+.subttl {
   margin-top: 0.2em;
 }
 
-.post_header__time {
+.time {
   display: flex;
   gap: 0.5em;
   color: $gray-50;

@@ -1,14 +1,14 @@
 @import "variables";
 
 .flexBox {
-  composes: flex_sideBySideCenter from 'styles/utils.module.scss';
+  composes: flex_sideBySideCenter from "styles/utils.module.scss";
 }
 
-.hero__txt {
+.wrapper {
   padding: calc(#{$display} * 0.5) 0 calc(#{$display} * 0.7);
 }
 
-.hero__ttl {
+.ttl {
   font-size: $display;
   font-weight: 900;
   letter-spacing: 0.15em;
@@ -18,7 +18,7 @@
   font-size: $small-heading2;
 }
 
-.hero__img {
+.img {
   width: 100%;
 
   @include mediaQuery(pc) {

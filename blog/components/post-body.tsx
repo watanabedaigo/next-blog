@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import styles from 'styles/post-body.module.scss'
+import { ReactNode } from "react";
+import styles from "styles/post-body.module.scss";
 
 type PostBodyProps = {
   children: ReactNode;
@@ -8,9 +8,5 @@ type PostBodyProps = {
 export default function PostBody(props: PostBodyProps) {
   const { children } = props;
 
-  return (
-    <div className={styles.post_body}>
-      {children}
-    </div>
-  )
+  return <div className={styles.wrapper}>{children}</div>;
 }

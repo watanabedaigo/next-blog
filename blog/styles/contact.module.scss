@@ -1,6 +1,6 @@
 @import "variables";
 
-.contact {
+.wrapper {
   margin-top: 1em;
 
   @include mediaQuery(pc) {
@@ -8,6 +8,6 @@
   }
 }
 
-.contact__heading {
+.ttl {
   font-size: $body;
 }

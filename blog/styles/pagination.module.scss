@@ -1,11 +1,11 @@
 @import "variables";
 
-.pagination__list {
+.list {
   composes: flex_bothEnds from "styles/utils.module.scss";
   margin: $space-lg 0;
 }
 
-.pagination__item {
+.item {
   a {
     display: flex;
     align-items: center;
@@ -13,6 +13,6 @@
   }
 }
 
-.pagination__item_next {
+.item_next {
   margin-left: 0;
 }

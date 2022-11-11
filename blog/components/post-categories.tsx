@@ -17,14 +17,14 @@ export default function PostCategories(props: PostCategoriesProps) {
 
   return (
     <div className={styles.flexBox}>
-      <h3 className={styles.category__ttl}>
+      <h3 className={styles.ttl}>
         <FontAwesomeIcon icon={faFolderOpen} />
         <span className="sr-only">Categories</span>
       </h3>
-      <ul className={styles.categories__list}>
+      <ul className={styles.list}>
         {categories.map((category: categoryProps) => {
           return (
-            <li key={category.slug} className={styles.categories__item}>
+            <li key={category.slug} className={styles.item}>
               <Link href={`blog/category/${category.slug}`}>
                 {category.name}
               </Link>

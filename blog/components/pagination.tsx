@@ -17,9 +17,9 @@ export default function Pagination(props: PaginationProps) {
   const { prevText, prevUrl, nextText, nextUrl } = props;
 
   return (
-    <ul className={styles.pagination__list}>
+    <ul className={styles.list}>
       {prevText && prevUrl && (
-        <li className={styles.pagination__item}>
+        <li className={styles.item}>
           <Link href={prevUrl}>
             <FontAwesomeIcon icon={faChevronLeft} />
             <span>{prevText}</span>
@@ -27,9 +27,7 @@ export default function Pagination(props: PaginationProps) {
         </li>
       )}
       {nextText && nextUrl && (
-        <li
-          className={`${styles.pagination__item} ${styles.pagination__item_next}`}
-        >
+        <li className={`${styles.item} ${styles.item_next}`}>
           <Link href={nextUrl}>
             <FontAwesomeIcon icon={faChevronRight} />
             <span>{nextText}</span>

@@ -58,7 +58,7 @@
   }
 }
 
-.nav__list {
+.list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +92,7 @@
 }
 
 @media (hover: hover) {
-  .nav__list {
+  .list {
     a {
       &:hover {
         color: $accent;
@@ -102,7 +102,7 @@
 }
 
 @media (hover: none) {
-  .nav__list {
+  .list {
     a {
       -webkit-tap-highlight-color: transparent;
 
